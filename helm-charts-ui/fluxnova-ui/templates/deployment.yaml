@@ -42,6 +42,8 @@ spec:
             - name: {{ $name | quote }}
               value: {{ $value | quote }}
             {{- end }}
+            - name: FXN_CC_VERSION
+              value: {{ .Values.image.tag | quote }}
             - name: HOST_IP
               valueFrom:
                 fieldRef:
